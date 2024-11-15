@@ -1,0 +1,970 @@
+pbd-cluster-m.europe-west4-b.c.big-data-2024-10-ik.internal
+*** Found local files:
+***   * /home/ivan_kaliadzich_bigdata/airflow/logs/dag_id=project1-workflow/run_id=manual__2024-11-08T13:58:36+00:00/task_id=hive/attempt=1.log
+[2024-11-08, 14:10:19 UTC] {local_task_job_runner.py:123} ▶ Pre task execution logs
+[2024-11-08, 14:10:19 UTC] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2024-11-08, 14:10:19 UTC] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'beeline -u jdbc:hive2://localhost:10000/default       -f /home/ivan_kaliadzich_bigdata/airflow/dags/project_files/process_top_persons.hql       --hivevar input_dir4=gs://pbd-24-ik-153936/projekt1/input/datasource4       --hivevar input_dir3=/project1/output_mr3       --hivevar output_dir6=/project1/output6']
+[2024-11-08, 14:10:19 UTC] {subprocess.py:99} INFO - Output:
+[2024-11-08, 14:10:20 UTC] {subprocess.py:106} INFO - SLF4J: Class path contains multiple SLF4J bindings.
+[2024-11-08, 14:10:20 UTC] {subprocess.py:106} INFO - SLF4J: Found binding in [jar:file:/usr/lib/tez/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+[2024-11-08, 14:10:20 UTC] {subprocess.py:106} INFO - SLF4J: Found binding in [jar:file:/usr/lib/hadoop/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+[2024-11-08, 14:10:20 UTC] {subprocess.py:106} INFO - SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+[2024-11-08, 14:10:20 UTC] {subprocess.py:106} INFO - SLF4J: Actual binding is of type [org.slf4j.impl.Reload4jLoggerFactory]
+[2024-11-08, 14:10:21 UTC] {subprocess.py:106} INFO - SLF4J: Class path contains multiple SLF4J bindings.
+[2024-11-08, 14:10:21 UTC] {subprocess.py:106} INFO - SLF4J: Found binding in [jar:file:/usr/lib/tez/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+[2024-11-08, 14:10:21 UTC] {subprocess.py:106} INFO - SLF4J: Found binding in [jar:file:/usr/lib/hadoop/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+[2024-11-08, 14:10:21 UTC] {subprocess.py:106} INFO - SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+[2024-11-08, 14:10:22 UTC] {subprocess.py:106} INFO - SLF4J: Actual binding is of type [org.slf4j.impl.Reload4jLoggerFactory]
+[2024-11-08, 14:10:23 UTC] {subprocess.py:106} INFO - Connecting to jdbc:hive2://localhost:10000/default
+[2024-11-08, 14:10:23 UTC] {subprocess.py:106} INFO - Connected to: Apache Hive (version 3.1.3)
+[2024-11-08, 14:10:23 UTC] {subprocess.py:106} INFO - Driver: Hive JDBC (version 3.1.3)
+[2024-11-08, 14:10:23 UTC] {subprocess.py:106} INFO - Transaction isolation: TRANSACTION_REPEATABLE_READ
+[2024-11-08, 14:10:23 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default> -- Add the hive-hcatalog-core JAR file
+[2024-11-08, 14:10:23 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:10:23 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default> ADD JAR /usr/lib/hive-hcatalog/share/hc 
+atalog/hive-hcatalog-core-3.1.3.jar;
+[2024-11-08, 14:10:23 UTC] {subprocess.py:106} INFO - INFO  : Added [/usr/lib/hive-hcatalog/share/hcatalog/hive-hcatalog-core-3.1.3.jar] to class path
+[2024-11-08, 14:10:23 UTC] {subprocess.py:106} INFO - INFO  : Added resources: [/usr/lib/hive-hcatalog/share/hcatalog/hive-hcatalog-core-3.1.3.jar]
+[2024-11-08, 14:10:23 UTC] {subprocess.py:106} INFO - No rows affected (0.055 seconds)
+[2024-11-08, 14:10:23 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:10:23 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:10:23 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:10:23 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default> -- Drop tables if they exist (optional)
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default> DROP TABLE IF EXISTS mapreduce_output;
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Compiling command(queryId=hive_20241108141024_a81a652f-5e3e-4ba5-8b58-74ba372ac889): DROP TABLE IF EXISTS mapreduce_output
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Concurrency mode is disabled, not creating a lock manager
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Semantic Analysis Completed (retrial = false)
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Returning Hive schema: Schema(fieldSchemas:null, properties:null)
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Completed compiling command(queryId=hive_20241108141024_a81a652f-5e3e-4ba5-8b58-74ba372ac889); Time taken: 0.055 seconds
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Concurrency mode is disabled, not creating a lock manager
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Executing command(queryId=hive_20241108141024_a81a652f-5e3e-4ba5-8b58-74ba372ac889): DROP TABLE IF EXISTS mapreduce_output
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Starting task [Stage-0:DDL] in serial mode
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Completed executing command(queryId=hive_20241108141024_a81a652f-5e3e-4ba5-8b58-74ba372ac889); Time taken: 0.099 seconds
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : OK
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Concurrency mode is disabled, not creating a lock manager
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - No rows affected (0.177 seconds)
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default> DROP TABLE IF EXISTS persons;
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Compiling command(queryId=hive_20241108141024_3704d294-16ef-4379-a81f-ba5aaad61d07): DROP TABLE IF EXISTS persons
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Concurrency mode is disabled, not creating a lock manager
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Semantic Analysis Completed (retrial = false)
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Returning Hive schema: Schema(fieldSchemas:null, properties:null)
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Completed compiling command(queryId=hive_20241108141024_3704d294-16ef-4379-a81f-ba5aaad61d07); Time taken: 0.034 seconds
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Concurrency mode is disabled, not creating a lock manager
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Executing command(queryId=hive_20241108141024_3704d294-16ef-4379-a81f-ba5aaad61d07): DROP TABLE IF EXISTS persons
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Starting task [Stage-0:DDL] in serial mode
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Completed executing command(queryId=hive_20241108141024_3704d294-16ef-4379-a81f-ba5aaad61d07); Time taken: 0.089 seconds
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : OK
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Concurrency mode is disabled, not creating a lock manager
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - No rows affected (0.135 seconds)
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default> DROP TABLE IF EXISTS top_persons;
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Compiling command(queryId=hive_20241108141024_db16184b-0806-439a-b478-552e5a75b47b): DROP TABLE IF EXISTS top_persons
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Concurrency mode is disabled, not creating a lock manager
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Semantic Analysis Completed (retrial = false)
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Returning Hive schema: Schema(fieldSchemas:null, properties:null)
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Completed compiling command(queryId=hive_20241108141024_db16184b-0806-439a-b478-552e5a75b47b); Time taken: 0.033 seconds
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Concurrency mode is disabled, not creating a lock manager
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Executing command(queryId=hive_20241108141024_db16184b-0806-439a-b478-552e5a75b47b): DROP TABLE IF EXISTS top_persons
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Starting task [Stage-0:DDL] in serial mode
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Completed executing command(queryId=hive_20241108141024_db16184b-0806-439a-b478-552e5a75b47b); Time taken: 0.087 seconds
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : OK
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Concurrency mode is disabled, not creating a lock manager
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - No rows affected (0.133 seconds)
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default> DROP TABLE IF EXISTS output_json;
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Compiling command(queryId=hive_20241108141024_9db63faa-ffba-448b-a838-93363363ddec): DROP TABLE IF EXISTS output_json
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Concurrency mode is disabled, not creating a lock manager
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Semantic Analysis Completed (retrial = false)
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Returning Hive schema: Schema(fieldSchemas:null, properties:null)
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Completed compiling command(queryId=hive_20241108141024_9db63faa-ffba-448b-a838-93363363ddec); Time taken: 0.03 seconds
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Concurrency mode is disabled, not creating a lock manager
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Executing command(queryId=hive_20241108141024_9db63faa-ffba-448b-a838-93363363ddec): DROP TABLE IF EXISTS output_json
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Starting task [Stage-0:DDL] in serial mode
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Completed executing command(queryId=hive_20241108141024_9db63faa-ffba-448b-a838-93363363ddec); Time taken: 0.008 seconds
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : OK
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Concurrency mode is disabled, not creating a lock manager
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - No rows affected (0.057 seconds)
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default> -- Create external table for MapReduce  
+output
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default> CREATE EXTERNAL TABLE mapreduce_output  
+(
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>   nconst STRING,
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>   acting_count INT,
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>   directing_count INT
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .> )
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .> ROW FORMAT DELIMITED
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .> FIELDS TERMINATED BY '\t'
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .> STORED AS TEXTFILE
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .> LOCATION '${input_dir3}';
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Compiling command(queryId=hive_20241108141024_78d3693d-0b62-489e-86db-7945070b9c16): CREATE EXTERNAL TABLE mapreduce_output (
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - nconst STRING,
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - acting_count INT,
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - directing_count INT
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - )
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - ROW FORMAT DELIMITED
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - FIELDS TERMINATED BY '\t'
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - STORED AS TEXTFILE
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - LOCATION '/project1/output_mr3'
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Concurrency mode is disabled, not creating a lock manager
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Semantic Analysis Completed (retrial = false)
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Returning Hive schema: Schema(fieldSchemas:null, properties:null)
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Completed compiling command(queryId=hive_20241108141024_78d3693d-0b62-489e-86db-7945070b9c16); Time taken: 0.027 seconds
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Concurrency mode is disabled, not creating a lock manager
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Executing command(queryId=hive_20241108141024_78d3693d-0b62-489e-86db-7945070b9c16): CREATE EXTERNAL TABLE mapreduce_output (
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - nconst STRING,
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - acting_count INT,
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - directing_count INT
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - )
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - ROW FORMAT DELIMITED
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - FIELDS TERMINATED BY '\t'
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - STORED AS TEXTFILE
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - LOCATION '/project1/output_mr3'
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Starting task [Stage-0:DDL] in serial mode
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Completed executing command(queryId=hive_20241108141024_78d3693d-0b62-489e-86db-7945070b9c16); Time taken: 0.051 seconds
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : OK
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - INFO  : Concurrency mode is disabled, not creating a lock manager
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - No rows affected (0.102 seconds)
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default> -- Create external table for persons da 
+ta
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default> CREATE EXTERNAL TABLE persons (
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>   nconst STRING,
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>   primaryName STRING,
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>   birthYear STRING,
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>   deathYear STRING,
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>   primaryProfession STRING,
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>   knownForTitles STRING
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .> )
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .> ROW FORMAT DELIMITED
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .> FIELDS TERMINATED BY '\t'
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .> STORED AS TEXTFILE
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:24 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .> LOCATION '${input_dir4}';
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - INFO  : Compiling command(queryId=hive_20241108141024_ee990ad4-fbec-47d0-a608-723d0789595f): CREATE EXTERNAL TABLE persons (
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - nconst STRING,
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - primaryName STRING,
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - birthYear STRING,
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - deathYear STRING,
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - primaryProfession STRING,
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - knownForTitles STRING
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - )
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - ROW FORMAT DELIMITED
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - FIELDS TERMINATED BY '\t'
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - STORED AS TEXTFILE
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - LOCATION 'gs://pbd-24-ik-153936/projekt1/input/datasource4'
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - INFO  : Concurrency mode is disabled, not creating a lock manager
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - INFO  : Semantic Analysis Completed (retrial = false)
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - INFO  : Returning Hive schema: Schema(fieldSchemas:null, properties:null)
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - INFO  : Completed compiling command(queryId=hive_20241108141024_ee990ad4-fbec-47d0-a608-723d0789595f); Time taken: 0.042 seconds
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - INFO  : Concurrency mode is disabled, not creating a lock manager
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - INFO  : Executing command(queryId=hive_20241108141024_ee990ad4-fbec-47d0-a608-723d0789595f): CREATE EXTERNAL TABLE persons (
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - nconst STRING,
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - primaryName STRING,
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - birthYear STRING,
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - deathYear STRING,
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - primaryProfession STRING,
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - knownForTitles STRING
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - )
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - ROW FORMAT DELIMITED
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - FIELDS TERMINATED BY '\t'
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - STORED AS TEXTFILE
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - LOCATION 'gs://pbd-24-ik-153936/projekt1/input/datasource4'
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - INFO  : Starting task [Stage-0:DDL] in serial mode
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - INFO  : Completed executing command(queryId=hive_20241108141024_ee990ad4-fbec-47d0-a608-723d0789595f); Time taken: 0.215 seconds
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - INFO  : OK
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - INFO  : Concurrency mode is disabled, not creating a lock manager
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - No rows affected (0.269 seconds)
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default> -- Create managed table for the final r 
+esult
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default> CREATE TABLE top_persons (
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>   primaryName STRING,
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>   role STRING,
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>   movies INT
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .> );
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - INFO  : Compiling command(queryId=hive_20241108141025_e1d9a78c-3c4f-4048-824f-6a4961c3e604): CREATE TABLE top_persons (
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - primaryName STRING,
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - role STRING,
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - movies INT
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - )
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - INFO  : Concurrency mode is disabled, not creating a lock manager
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - INFO  : Semantic Analysis Completed (retrial = false)
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - INFO  : Returning Hive schema: Schema(fieldSchemas:null, properties:null)
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - INFO  : Completed compiling command(queryId=hive_20241108141025_e1d9a78c-3c4f-4048-824f-6a4961c3e604); Time taken: 0.025 seconds
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - INFO  : Concurrency mode is disabled, not creating a lock manager
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - INFO  : Executing command(queryId=hive_20241108141025_e1d9a78c-3c4f-4048-824f-6a4961c3e604): CREATE TABLE top_persons (
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - primaryName STRING,
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - role STRING,
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - movies INT
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - )
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - INFO  : Starting task [Stage-0:DDL] in serial mode
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - INFO  : Completed executing command(queryId=hive_20241108141025_e1d9a78c-3c4f-4048-824f-6a4961c3e604); Time taken: 0.033 seconds
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - INFO  : OK
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - INFO  : Concurrency mode is disabled, not creating a lock manager
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - No rows affected (0.071 seconds)
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default> -- Insert data into top_persons table
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default> INSERT OVERWRITE TABLE top_persons
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .> SELECT primaryName, role, movies FROM (
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>   -- Subquery for top 3 actors
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>   SELECT * FROM (
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>     SELECT
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>       p.primaryName,
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>       'actor' AS role,
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>       mo.acting_count AS movies
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>     FROM
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>       persons p
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>       JOIN mapreduce_output mo ON p.nco 
+nst = mo.nconst
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>     WHERE
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>       p.primaryProfession RLIKE '(?i)ac 
+tor|actress'
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>     ORDER BY
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>       mo.acting_count DESC
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>     LIMIT 3
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>   ) AS top_actors
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>   UNION ALL
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>   -- Subquery for top 3 directors
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>   SELECT * FROM (
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>     SELECT
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>       p.primaryName,
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>       'director' AS role,
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>       mo.directing_count AS movies
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>     FROM
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>       persons p
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>       JOIN mapreduce_output mo ON p.nco 
+nst = mo.nconst
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>     WHERE
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>       p.primaryProfession RLIKE '(?i)di 
+rector'
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>     ORDER BY
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>       mo.directing_count DESC
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>     LIMIT 3
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>   ) AS top_directors
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:10:25 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .> ) combined_results;
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - INFO  : Compiling command(queryId=hive_20241108141025_43209a98-78c4-439d-b300-f9dafb0792e8): INSERT OVERWRITE TABLE top_persons
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - SELECT primaryName, role, movies FROM (
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - SELECT * FROM (
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - SELECT
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - p.primaryName,
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - 'actor' AS role,
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - mo.acting_count AS movies
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - FROM
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - persons p
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - JOIN mapreduce_output mo ON p.nconst = mo.nconst
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - WHERE
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - p.primaryProfession RLIKE '(?i)actor|actress'
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - ORDER BY
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - mo.acting_count DESC
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - LIMIT 3
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - ) AS top_actors
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - UNION ALL
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - SELECT * FROM (
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - SELECT
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - p.primaryName,
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - 'director' AS role,
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - mo.directing_count AS movies
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - FROM
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - persons p
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - JOIN mapreduce_output mo ON p.nconst = mo.nconst
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - WHERE
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - p.primaryProfession RLIKE '(?i)director'
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - ORDER BY
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - mo.directing_count DESC
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - LIMIT 3
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - ) AS top_directors
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - ) combined_results
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - INFO  : Concurrency mode is disabled, not creating a lock manager
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - INFO  : No Stats for default@persons, Columns: primaryprofession, primaryname, nconst
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - INFO  : No Stats for default@mapreduce_output, Columns: acting_count, nconst
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - INFO  : No Stats for default@mapreduce_output, Columns: directing_count
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - INFO  : Semantic Analysis Completed (retrial = false)
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - INFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:primaryname, type:string, comment:null), FieldSchema(name:role, type:string, comment:null), FieldSchema(name:movies, type:int, comment:null)], properties:null)
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - INFO  : Completed compiling command(queryId=hive_20241108141025_43209a98-78c4-439d-b300-f9dafb0792e8); Time taken: 0.585 seconds
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - INFO  : Concurrency mode is disabled, not creating a lock manager
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - INFO  : Executing command(queryId=hive_20241108141025_43209a98-78c4-439d-b300-f9dafb0792e8): INSERT OVERWRITE TABLE top_persons
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - SELECT primaryName, role, movies FROM (
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - SELECT * FROM (
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - SELECT
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - p.primaryName,
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - 'actor' AS role,
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - mo.acting_count AS movies
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - FROM
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - persons p
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - JOIN mapreduce_output mo ON p.nconst = mo.nconst
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - WHERE
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - p.primaryProfession RLIKE '(?i)actor|actress'
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - ORDER BY
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - mo.acting_count DESC
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - LIMIT 3
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - ) AS top_actors
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - UNION ALL
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - SELECT * FROM (
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - SELECT
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - p.primaryName,
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - 'director' AS role,
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - mo.directing_count AS movies
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - FROM
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - persons p
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - JOIN mapreduce_output mo ON p.nconst = mo.nconst
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - WHERE
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - p.primaryProfession RLIKE '(?i)director'
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - ORDER BY
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - mo.directing_count DESC
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - LIMIT 3
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - ) AS top_directors
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - ) combined_results
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - INFO  : Query ID = hive_20241108141025_43209a98-78c4-439d-b300-f9dafb0792e8
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - INFO  : Total jobs = 1
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - INFO  : Launching Job 1 out of 1
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - INFO  : Starting task [Stage-1:MAPRED] in serial mode
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - INFO  : Subscribed to counters: [] for queryId: hive_20241108141025_43209a98-78c4-439d-b300-f9dafb0792e8
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - INFO  : Tez session hasn't been created yet. Opening session
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - INFO  : Dag name: INSERT OVERWRITE TABLE to...combined_results (Stage-1)
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - INFO  : Status: Running (Executing on YARN cluster with App id application_1731070111482_0006)
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - 
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO -         VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - Map 1            container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - Map 6            container        INITED      5          0        0        5       0       0
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - Reducer 2        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - Reducer 3        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - Reducer 5        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - Map 9            container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - Reducer 7        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - Reducer 8        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - VERTICES: 00/08  [>>--------------------------] 0%    ELAPSED TIME: 3.51 s
+[2024-11-08, 14:10:43 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:44 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:44 UTC] {subprocess.py:106} INFO -         VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+[2024-11-08, 14:10:44 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:44 UTC] {subprocess.py:106} INFO - Map 1            container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:44 UTC] {subprocess.py:106} INFO - Map 6            container        INITED      5          0        0        5       0       0
+[2024-11-08, 14:10:44 UTC] {subprocess.py:106} INFO - Reducer 2        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:10:44 UTC] {subprocess.py:106} INFO - Reducer 3        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:44 UTC] {subprocess.py:106} INFO - Reducer 5        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:44 UTC] {subprocess.py:106} INFO - Map 9            container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:44 UTC] {subprocess.py:106} INFO - Reducer 7        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:10:44 UTC] {subprocess.py:106} INFO - Reducer 8        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:44 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:44 UTC] {subprocess.py:106} INFO - VERTICES: 00/08  [>>--------------------------] 0%    ELAPSED TIME: 4.51 s
+[2024-11-08, 14:10:44 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:45 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:45 UTC] {subprocess.py:106} INFO -         VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+[2024-11-08, 14:10:45 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:45 UTC] {subprocess.py:106} INFO - Map 1            container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:45 UTC] {subprocess.py:106} INFO - Map 6            container        INITED      5          0        0        5       0       0
+[2024-11-08, 14:10:45 UTC] {subprocess.py:106} INFO - Reducer 2        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:10:45 UTC] {subprocess.py:106} INFO - Reducer 3        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:45 UTC] {subprocess.py:106} INFO - Reducer 5        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:45 UTC] {subprocess.py:106} INFO - Map 9            container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:45 UTC] {subprocess.py:106} INFO - Reducer 7        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:10:45 UTC] {subprocess.py:106} INFO - Reducer 8        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:45 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:45 UTC] {subprocess.py:106} INFO - VERTICES: 00/08  [>>--------------------------] 0%    ELAPSED TIME: 5.51 s
+[2024-11-08, 14:10:45 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:46 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:46 UTC] {subprocess.py:106} INFO -         VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+[2024-11-08, 14:10:46 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:46 UTC] {subprocess.py:106} INFO - Map 1            container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:46 UTC] {subprocess.py:106} INFO - Map 6            container        INITED      5          0        0        5       0       0
+[2024-11-08, 14:10:46 UTC] {subprocess.py:106} INFO - Reducer 2        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:10:46 UTC] {subprocess.py:106} INFO - Reducer 3        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:46 UTC] {subprocess.py:106} INFO - Reducer 5        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:46 UTC] {subprocess.py:106} INFO - Map 9            container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:46 UTC] {subprocess.py:106} INFO - Reducer 7        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:10:46 UTC] {subprocess.py:106} INFO - Reducer 8        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:46 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:46 UTC] {subprocess.py:106} INFO - VERTICES: 00/08  [>>--------------------------] 0%    ELAPSED TIME: 6.52 s
+[2024-11-08, 14:10:46 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:47 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:47 UTC] {subprocess.py:106} INFO -         VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+[2024-11-08, 14:10:47 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:47 UTC] {subprocess.py:106} INFO - Map 1            container        INITED      1          0        0        1       0       1
+[2024-11-08, 14:10:47 UTC] {subprocess.py:106} INFO - Map 6            container        INITED      5          0        0        5       0       0
+[2024-11-08, 14:10:47 UTC] {subprocess.py:106} INFO - Reducer 2        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:10:47 UTC] {subprocess.py:106} INFO - Reducer 3        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:47 UTC] {subprocess.py:106} INFO - Reducer 5        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:47 UTC] {subprocess.py:106} INFO - Map 9            container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:47 UTC] {subprocess.py:106} INFO - Reducer 7        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:10:47 UTC] {subprocess.py:106} INFO - Reducer 8        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:47 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:47 UTC] {subprocess.py:106} INFO - VERTICES: 00/08  [>>--------------------------] 0%    ELAPSED TIME: 8.02 s
+[2024-11-08, 14:10:47 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:49 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:49 UTC] {subprocess.py:106} INFO -         VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+[2024-11-08, 14:10:49 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:49 UTC] {subprocess.py:106} INFO - Map 1            container        INITED      1          0        0        1       0       1
+[2024-11-08, 14:10:49 UTC] {subprocess.py:106} INFO - Map 6            container       RUNNING      5          0        1        4       0       0
+[2024-11-08, 14:10:49 UTC] {subprocess.py:106} INFO - Reducer 2        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:10:49 UTC] {subprocess.py:106} INFO - Reducer 3        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:49 UTC] {subprocess.py:106} INFO - Reducer 5        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:49 UTC] {subprocess.py:106} INFO - Map 9            container       RUNNING      1          0        1        0       0       0
+[2024-11-08, 14:10:49 UTC] {subprocess.py:106} INFO - Reducer 7        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:10:49 UTC] {subprocess.py:106} INFO - Reducer 8        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:49 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:49 UTC] {subprocess.py:106} INFO - VERTICES: 00/08  [>>--------------------------] 0%    ELAPSED TIME: 9.53 s
+[2024-11-08, 14:10:49 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:50 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:50 UTC] {subprocess.py:106} INFO -         VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+[2024-11-08, 14:10:50 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:50 UTC] {subprocess.py:106} INFO - Map 1            container        INITED      1          0        0        1       0       1
+[2024-11-08, 14:10:50 UTC] {subprocess.py:106} INFO - Map 6            container       RUNNING      5          0        1        4       0       0
+[2024-11-08, 14:10:50 UTC] {subprocess.py:106} INFO - Reducer 2        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:10:50 UTC] {subprocess.py:106} INFO - Reducer 3        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:50 UTC] {subprocess.py:106} INFO - Reducer 5        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:50 UTC] {subprocess.py:106} INFO - Map 9            container       RUNNING      1          0        1        0       0       0
+[2024-11-08, 14:10:50 UTC] {subprocess.py:106} INFO - Reducer 7        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:10:50 UTC] {subprocess.py:106} INFO - Reducer 8        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:50 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:50 UTC] {subprocess.py:106} INFO - VERTICES: 00/08  [>>--------------------------] 0%    ELAPSED TIME: 11.04 s
+[2024-11-08, 14:10:50 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:52 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:52 UTC] {subprocess.py:106} INFO -         VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+[2024-11-08, 14:10:52 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:52 UTC] {subprocess.py:106} INFO - Map 1            container        INITED      1          0        0        1       0       1
+[2024-11-08, 14:10:52 UTC] {subprocess.py:106} INFO - Map 6            container       RUNNING      5          0        1        4       0       0
+[2024-11-08, 14:10:52 UTC] {subprocess.py:106} INFO - Reducer 2        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:10:52 UTC] {subprocess.py:106} INFO - Reducer 3        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:52 UTC] {subprocess.py:106} INFO - Reducer 5        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:52 UTC] {subprocess.py:106} INFO - Map 9            container       RUNNING      1          0        1        0       0       0
+[2024-11-08, 14:10:52 UTC] {subprocess.py:106} INFO - Reducer 7        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:10:52 UTC] {subprocess.py:106} INFO - Reducer 8        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:52 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:52 UTC] {subprocess.py:106} INFO - VERTICES: 00/08  [>>--------------------------] 0%    ELAPSED TIME: 12.54 s
+[2024-11-08, 14:10:52 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:53 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:53 UTC] {subprocess.py:106} INFO -         VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+[2024-11-08, 14:10:53 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:53 UTC] {subprocess.py:106} INFO - Map 1            container        INITED      1          0        0        1       0       1
+[2024-11-08, 14:10:53 UTC] {subprocess.py:106} INFO - Map 6            container       RUNNING      5          0        1        4       0       0
+[2024-11-08, 14:10:53 UTC] {subprocess.py:106} INFO - Reducer 2        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:10:53 UTC] {subprocess.py:106} INFO - Reducer 3        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:53 UTC] {subprocess.py:106} INFO - Reducer 5        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:53 UTC] {subprocess.py:106} INFO - Map 9            container       RUNNING      1          0        1        0       0       0
+[2024-11-08, 14:10:53 UTC] {subprocess.py:106} INFO - Reducer 7        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:10:53 UTC] {subprocess.py:106} INFO - Reducer 8        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:53 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:53 UTC] {subprocess.py:106} INFO - VERTICES: 00/08  [>>--------------------------] 0%    ELAPSED TIME: 14.04 s
+[2024-11-08, 14:10:53 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:55 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:55 UTC] {subprocess.py:106} INFO -         VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+[2024-11-08, 14:10:55 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:55 UTC] {subprocess.py:106} INFO - Map 1            container        INITED      1          0        0        1       0       1
+[2024-11-08, 14:10:55 UTC] {subprocess.py:106} INFO - Map 6            container       RUNNING      5          0        1        4       0       0
+[2024-11-08, 14:10:55 UTC] {subprocess.py:106} INFO - Reducer 2        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:10:55 UTC] {subprocess.py:106} INFO - Reducer 3        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:55 UTC] {subprocess.py:106} INFO - Reducer 5        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:55 UTC] {subprocess.py:106} INFO - Map 9            container       RUNNING      1          0        1        0       0       0
+[2024-11-08, 14:10:55 UTC] {subprocess.py:106} INFO - Reducer 7        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:10:55 UTC] {subprocess.py:106} INFO - Reducer 8        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:55 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:55 UTC] {subprocess.py:106} INFO - VERTICES: 00/08  [>>--------------------------] 0%    ELAPSED TIME: 15.55 s
+[2024-11-08, 14:10:55 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:56 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:56 UTC] {subprocess.py:106} INFO -         VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+[2024-11-08, 14:10:56 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:56 UTC] {subprocess.py:106} INFO - Map 1            container        INITED      1          0        0        1       0       1
+[2024-11-08, 14:10:56 UTC] {subprocess.py:106} INFO - Map 6            container       RUNNING      5          0        2        3       0       0
+[2024-11-08, 14:10:56 UTC] {subprocess.py:106} INFO - Reducer 2        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:10:56 UTC] {subprocess.py:106} INFO - Reducer 3        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:56 UTC] {subprocess.py:106} INFO - Reducer 5        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:56 UTC] {subprocess.py:106} INFO - Map 9            container       RUNNING      1          0        1        0       0       0
+[2024-11-08, 14:10:56 UTC] {subprocess.py:106} INFO - Reducer 7        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:10:56 UTC] {subprocess.py:106} INFO - Reducer 8        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:56 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:56 UTC] {subprocess.py:106} INFO - VERTICES: 00/08  [>>--------------------------] 0%    ELAPSED TIME: 17.05 s
+[2024-11-08, 14:10:56 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:58 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:58 UTC] {subprocess.py:106} INFO -         VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+[2024-11-08, 14:10:58 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:58 UTC] {subprocess.py:106} INFO - Map 1            container        INITED      1          0        0        1       0       1
+[2024-11-08, 14:10:58 UTC] {subprocess.py:106} INFO - Map 6            container       RUNNING      5          0        2        3       0       0
+[2024-11-08, 14:10:58 UTC] {subprocess.py:106} INFO - Reducer 2        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:10:58 UTC] {subprocess.py:106} INFO - Reducer 3        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:58 UTC] {subprocess.py:106} INFO - Reducer 5        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:58 UTC] {subprocess.py:106} INFO - Map 9            container       RUNNING      1          0        1        0       0       0
+[2024-11-08, 14:10:58 UTC] {subprocess.py:106} INFO - Reducer 7        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:10:58 UTC] {subprocess.py:106} INFO - Reducer 8        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:10:58 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:10:58 UTC] {subprocess.py:106} INFO - VERTICES: 00/08  [>>--------------------------] 0%    ELAPSED TIME: 19.06 s
+[2024-11-08, 14:10:58 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:00 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:00 UTC] {subprocess.py:106} INFO -         VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+[2024-11-08, 14:11:00 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:00 UTC] {subprocess.py:106} INFO - Map 1            container        INITED      1          0        0        1       0       1
+[2024-11-08, 14:11:00 UTC] {subprocess.py:106} INFO - Map 6 ..         container       RUNNING      5          1        2        2       0       0
+[2024-11-08, 14:11:00 UTC] {subprocess.py:106} INFO - Reducer 2        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:11:00 UTC] {subprocess.py:106} INFO - Reducer 3        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:00 UTC] {subprocess.py:106} INFO - Reducer 5        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:00 UTC] {subprocess.py:106} INFO - Map 9            container       RUNNING      1          0        1        0       0       0
+[2024-11-08, 14:11:00 UTC] {subprocess.py:106} INFO - Reducer 7        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:11:00 UTC] {subprocess.py:106} INFO - Reducer 8        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:00 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:00 UTC] {subprocess.py:106} INFO - VERTICES: 00/08  [>>--------------------------] 2%    ELAPSED TIME: 21.06 s
+[2024-11-08, 14:11:00 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:02 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:02 UTC] {subprocess.py:106} INFO -         VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+[2024-11-08, 14:11:02 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:02 UTC] {subprocess.py:106} INFO - Map 1            container        INITED      1          0        0        1       0       1
+[2024-11-08, 14:11:02 UTC] {subprocess.py:106} INFO - Map 6 ..         container       RUNNING      5          1        2        2       0       0
+[2024-11-08, 14:11:02 UTC] {subprocess.py:106} INFO - Reducer 2        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:11:02 UTC] {subprocess.py:106} INFO - Reducer 3        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:02 UTC] {subprocess.py:106} INFO - Reducer 5        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:02 UTC] {subprocess.py:106} INFO - Map 9            container       RUNNING      1          0        1        0       0       0
+[2024-11-08, 14:11:02 UTC] {subprocess.py:106} INFO - Reducer 7        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:11:02 UTC] {subprocess.py:106} INFO - Reducer 8        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:02 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:02 UTC] {subprocess.py:106} INFO - VERTICES: 00/08  [>>--------------------------] 2%    ELAPSED TIME: 23.06 s
+[2024-11-08, 14:11:02 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:04 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:04 UTC] {subprocess.py:106} INFO -         VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+[2024-11-08, 14:11:04 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:04 UTC] {subprocess.py:106} INFO - Map 1            container        INITED      1          0        0        1       0       1
+[2024-11-08, 14:11:04 UTC] {subprocess.py:106} INFO - Map 6 ..         container       RUNNING      5          1        2        2       0       0
+[2024-11-08, 14:11:04 UTC] {subprocess.py:106} INFO - Reducer 2        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:11:04 UTC] {subprocess.py:106} INFO - Reducer 3        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:04 UTC] {subprocess.py:106} INFO - Reducer 5        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:04 UTC] {subprocess.py:106} INFO - Map 9            container       RUNNING      1          0        1        0       0       0
+[2024-11-08, 14:11:04 UTC] {subprocess.py:106} INFO - Reducer 7        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:11:04 UTC] {subprocess.py:106} INFO - Reducer 8        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:04 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:04 UTC] {subprocess.py:106} INFO - VERTICES: 00/08  [>>--------------------------] 2%    ELAPSED TIME: 25.07 s
+[2024-11-08, 14:11:04 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:06 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:06 UTC] {subprocess.py:106} INFO -         VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+[2024-11-08, 14:11:06 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:06 UTC] {subprocess.py:106} INFO - Map 1            container        INITED      1          0        0        1       0       1
+[2024-11-08, 14:11:06 UTC] {subprocess.py:106} INFO - Map 6 ....       container       RUNNING      5          2        2        1       0       0
+[2024-11-08, 14:11:06 UTC] {subprocess.py:106} INFO - Reducer 2        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:11:06 UTC] {subprocess.py:106} INFO - Reducer 3        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:06 UTC] {subprocess.py:106} INFO - Reducer 5        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:06 UTC] {subprocess.py:106} INFO - Map 9            container       RUNNING      1          0        1        0       0       0
+[2024-11-08, 14:11:06 UTC] {subprocess.py:106} INFO - Reducer 7        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:11:06 UTC] {subprocess.py:106} INFO - Reducer 8        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:06 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:06 UTC] {subprocess.py:106} INFO - VERTICES: 00/08  [=>>-------------------------] 5%    ELAPSED TIME: 27.07 s
+[2024-11-08, 14:11:06 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:09 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:09 UTC] {subprocess.py:106} INFO -         VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+[2024-11-08, 14:11:09 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:09 UTC] {subprocess.py:106} INFO - Map 1            container        INITED      1          0        0        1       0       1
+[2024-11-08, 14:11:09 UTC] {subprocess.py:106} INFO - Map 6 ....       container       RUNNING      5          2        2        1       0       0
+[2024-11-08, 14:11:09 UTC] {subprocess.py:106} INFO - Reducer 2        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:11:09 UTC] {subprocess.py:106} INFO - Reducer 3        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:09 UTC] {subprocess.py:106} INFO - Reducer 5        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:09 UTC] {subprocess.py:106} INFO - Map 9            container       RUNNING      1          0        1        0       0       0
+[2024-11-08, 14:11:09 UTC] {subprocess.py:106} INFO - Reducer 7        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:11:09 UTC] {subprocess.py:106} INFO - Reducer 8        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:09 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:09 UTC] {subprocess.py:106} INFO - VERTICES: 00/08  [=>>-------------------------] 5%    ELAPSED TIME: 29.57 s
+[2024-11-08, 14:11:09 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:11 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:11 UTC] {subprocess.py:106} INFO -         VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+[2024-11-08, 14:11:11 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:11 UTC] {subprocess.py:106} INFO - Map 1            container       RUNNING      1          0        1        0       0       1
+[2024-11-08, 14:11:11 UTC] {subprocess.py:106} INFO - Map 6 ......     container       RUNNING      5          3        2        0       0       0
+[2024-11-08, 14:11:11 UTC] {subprocess.py:106} INFO - Reducer 2        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:11:11 UTC] {subprocess.py:106} INFO - Reducer 3        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:11 UTC] {subprocess.py:106} INFO - Reducer 5        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:11 UTC] {subprocess.py:106} INFO - Map 9 .......... container     SUCCEEDED      1          1        0        0       0       0
+[2024-11-08, 14:11:11 UTC] {subprocess.py:106} INFO - Reducer 7        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:11:11 UTC] {subprocess.py:106} INFO - Reducer 8        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:11 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:11 UTC] {subprocess.py:106} INFO - VERTICES: 01/08  [==>>------------------------] 11%   ELAPSED TIME: 32.08 s
+[2024-11-08, 14:11:11 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:14 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:14 UTC] {subprocess.py:106} INFO -         VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+[2024-11-08, 14:11:14 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:14 UTC] {subprocess.py:106} INFO - Map 1            container       RUNNING      1          0        1        0       0       1
+[2024-11-08, 14:11:14 UTC] {subprocess.py:106} INFO - Map 6 ......     container       RUNNING      5          3        2        0       0       0
+[2024-11-08, 14:11:14 UTC] {subprocess.py:106} INFO - Reducer 2        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:11:14 UTC] {subprocess.py:106} INFO - Reducer 3        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:14 UTC] {subprocess.py:106} INFO - Reducer 5        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:14 UTC] {subprocess.py:106} INFO - Map 9 .......... container     SUCCEEDED      1          1        0        0       0       0
+[2024-11-08, 14:11:14 UTC] {subprocess.py:106} INFO - Reducer 7        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:11:14 UTC] {subprocess.py:106} INFO - Reducer 8        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:14 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:14 UTC] {subprocess.py:106} INFO - VERTICES: 01/08  [==>>------------------------] 11%   ELAPSED TIME: 34.58 s
+[2024-11-08, 14:11:14 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:16 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:16 UTC] {subprocess.py:106} INFO -         VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+[2024-11-08, 14:11:16 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:16 UTC] {subprocess.py:106} INFO - Map 1            container       RUNNING      1          0        1        0       0       1
+[2024-11-08, 14:11:16 UTC] {subprocess.py:106} INFO - Map 6 ........   container       RUNNING      5          4        1        0       0       0
+[2024-11-08, 14:11:16 UTC] {subprocess.py:106} INFO - Reducer 2        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:11:16 UTC] {subprocess.py:106} INFO - Reducer 3        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:16 UTC] {subprocess.py:106} INFO - Reducer 5        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:16 UTC] {subprocess.py:106} INFO - Map 9 .......... container     SUCCEEDED      1          1        0        0       0       0
+[2024-11-08, 14:11:16 UTC] {subprocess.py:106} INFO - Reducer 7        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:11:16 UTC] {subprocess.py:106} INFO - Reducer 8        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:16 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:16 UTC] {subprocess.py:106} INFO - VERTICES: 01/08  [===>>-----------------------] 13%   ELAPSED TIME: 37.08 s
+[2024-11-08, 14:11:16 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:19 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:19 UTC] {subprocess.py:106} INFO -         VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+[2024-11-08, 14:11:19 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:19 UTC] {subprocess.py:106} INFO - Map 1 .......... container     SUCCEEDED      1          1        0        0       0       1
+[2024-11-08, 14:11:19 UTC] {subprocess.py:106} INFO - Map 6 .......... container     SUCCEEDED      5          5        0        0       0       0
+[2024-11-08, 14:11:19 UTC] {subprocess.py:106} INFO - Reducer 2        container       RUNNING     13          0        3       10       0       0
+[2024-11-08, 14:11:19 UTC] {subprocess.py:106} INFO - Reducer 3        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:19 UTC] {subprocess.py:106} INFO - Reducer 5        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:19 UTC] {subprocess.py:106} INFO - Map 9 .......... container     SUCCEEDED      1          1        0        0       0       0
+[2024-11-08, 14:11:19 UTC] {subprocess.py:106} INFO - Reducer 7        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:11:19 UTC] {subprocess.py:106} INFO - Reducer 8        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:19 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:19 UTC] {subprocess.py:106} INFO - VERTICES: 03/08  [=====>>---------------------] 19%   ELAPSED TIME: 40.09 s
+[2024-11-08, 14:11:19 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:22 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:22 UTC] {subprocess.py:106} INFO -         VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+[2024-11-08, 14:11:22 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:22 UTC] {subprocess.py:106} INFO - Map 1 .......... container     SUCCEEDED      1          1        0        0       0       1
+[2024-11-08, 14:11:22 UTC] {subprocess.py:106} INFO - Map 6 .......... container     SUCCEEDED      5          5        0        0       0       0
+[2024-11-08, 14:11:22 UTC] {subprocess.py:106} INFO - Reducer 2        container       RUNNING     13          0        3       10       0       1
+[2024-11-08, 14:11:22 UTC] {subprocess.py:106} INFO - Reducer 3        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:22 UTC] {subprocess.py:106} INFO - Reducer 5        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:22 UTC] {subprocess.py:106} INFO - Map 9 .......... container     SUCCEEDED      1          1        0        0       0       0
+[2024-11-08, 14:11:22 UTC] {subprocess.py:106} INFO - Reducer 7        container        INITED     13          0        0       13       0       0
+[2024-11-08, 14:11:22 UTC] {subprocess.py:106} INFO - Reducer 8        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:22 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:22 UTC] {subprocess.py:106} INFO - VERTICES: 03/08  [=====>>---------------------] 19%   ELAPSED TIME: 43.09 s
+[2024-11-08, 14:11:22 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:25 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:25 UTC] {subprocess.py:106} INFO -         VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+[2024-11-08, 14:11:25 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:25 UTC] {subprocess.py:106} INFO - Map 1 .......... container     SUCCEEDED      1          1        0        0       0       1
+[2024-11-08, 14:11:25 UTC] {subprocess.py:106} INFO - Map 6 .......... container     SUCCEEDED      5          5        0        0       0       0
+[2024-11-08, 14:11:25 UTC] {subprocess.py:106} INFO - Reducer 2        container       RUNNING     13          1        2       10       0       1
+[2024-11-08, 14:11:25 UTC] {subprocess.py:106} INFO - Reducer 3        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:25 UTC] {subprocess.py:106} INFO - Reducer 5        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:25 UTC] {subprocess.py:106} INFO - Map 9 .......... container     SUCCEEDED      1          1        0        0       0       0
+[2024-11-08, 14:11:25 UTC] {subprocess.py:106} INFO - Reducer 7        container       RUNNING     13          1        1       11       0       0
+[2024-11-08, 14:11:25 UTC] {subprocess.py:106} INFO - Reducer 8        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:25 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:25 UTC] {subprocess.py:106} INFO - VERTICES: 03/08  [======>>--------------------] 25%   ELAPSED TIME: 46.09 s
+[2024-11-08, 14:11:25 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:29 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:29 UTC] {subprocess.py:106} INFO -         VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+[2024-11-08, 14:11:29 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:29 UTC] {subprocess.py:106} INFO - Map 1 .......... container     SUCCEEDED      1          1        0        0       0       1
+[2024-11-08, 14:11:29 UTC] {subprocess.py:106} INFO - Map 6 .......... container     SUCCEEDED      5          5        0        0       0       0
+[2024-11-08, 14:11:29 UTC] {subprocess.py:106} INFO - Reducer 2        container       RUNNING     13          1        2       10       0       2
+[2024-11-08, 14:11:29 UTC] {subprocess.py:106} INFO - Reducer 3        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:29 UTC] {subprocess.py:106} INFO - Reducer 5        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:29 UTC] {subprocess.py:106} INFO - Map 9 .......... container     SUCCEEDED      1          1        0        0       0       0
+[2024-11-08, 14:11:29 UTC] {subprocess.py:106} INFO - Reducer 7 .      container       RUNNING     13          4        1        8       0       0
+[2024-11-08, 14:11:29 UTC] {subprocess.py:106} INFO - Reducer 8        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:29 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:29 UTC] {subprocess.py:106} INFO - VERTICES: 03/08  [========>>------------------] 33%   ELAPSED TIME: 49.60 s
+[2024-11-08, 14:11:29 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:32 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:32 UTC] {subprocess.py:106} INFO -         VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+[2024-11-08, 14:11:32 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:32 UTC] {subprocess.py:106} INFO - Map 1 .......... container     SUCCEEDED      1          1        0        0       0       1
+[2024-11-08, 14:11:32 UTC] {subprocess.py:106} INFO - Map 6 .......... container     SUCCEEDED      5          5        0        0       0       0
+[2024-11-08, 14:11:32 UTC] {subprocess.py:106} INFO - Reducer 2        container       RUNNING     13          1        2       10       0       2
+[2024-11-08, 14:11:32 UTC] {subprocess.py:106} INFO - Reducer 3        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:32 UTC] {subprocess.py:106} INFO - Reducer 5        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:32 UTC] {subprocess.py:106} INFO - Map 9 .......... container     SUCCEEDED      1          1        0        0       0       0
+[2024-11-08, 14:11:32 UTC] {subprocess.py:106} INFO - Reducer 7 ...    container       RUNNING     13          8        2        3       0       0
+[2024-11-08, 14:11:32 UTC] {subprocess.py:106} INFO - Reducer 8        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:32 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:32 UTC] {subprocess.py:106} INFO - VERTICES: 03/08  [===========>>---------------] 44%   ELAPSED TIME: 53.10 s
+[2024-11-08, 14:11:32 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:36 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:36 UTC] {subprocess.py:106} INFO -         VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+[2024-11-08, 14:11:36 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:36 UTC] {subprocess.py:106} INFO - Map 1 .......... container     SUCCEEDED      1          1        0        0       0       1
+[2024-11-08, 14:11:36 UTC] {subprocess.py:106} INFO - Map 6 .......... container     SUCCEEDED      5          5        0        0       0       0
+[2024-11-08, 14:11:36 UTC] {subprocess.py:106} INFO - Reducer 2        container       RUNNING     13          2        3        8       0       2
+[2024-11-08, 14:11:36 UTC] {subprocess.py:106} INFO - Reducer 3        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:36 UTC] {subprocess.py:106} INFO - Reducer 5        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:36 UTC] {subprocess.py:106} INFO - Map 9 .......... container     SUCCEEDED      1          1        0        0       0       0
+[2024-11-08, 14:11:36 UTC] {subprocess.py:106} INFO - Reducer 7 .....  container       RUNNING     13         11        2        0       0       0
+[2024-11-08, 14:11:36 UTC] {subprocess.py:106} INFO - Reducer 8        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:36 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:36 UTC] {subprocess.py:106} INFO - VERTICES: 03/08  [==============>>------------] 55%   ELAPSED TIME: 56.61 s
+[2024-11-08, 14:11:36 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:40 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:40 UTC] {subprocess.py:106} INFO -         VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+[2024-11-08, 14:11:40 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:40 UTC] {subprocess.py:106} INFO - Map 1 .......... container     SUCCEEDED      1          1        0        0       0       1
+[2024-11-08, 14:11:40 UTC] {subprocess.py:106} INFO - Map 6 .......... container     SUCCEEDED      5          5        0        0       0       0
+[2024-11-08, 14:11:40 UTC] {subprocess.py:106} INFO - Reducer 2 ..     container       RUNNING     13          5        4        4       0       2
+[2024-11-08, 14:11:40 UTC] {subprocess.py:106} INFO - Reducer 3        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:40 UTC] {subprocess.py:106} INFO - Reducer 5        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:40 UTC] {subprocess.py:106} INFO - Map 9 .......... container     SUCCEEDED      1          1        0        0       0       0
+[2024-11-08, 14:11:40 UTC] {subprocess.py:106} INFO - Reducer 7 .....  container       RUNNING     13         12        1        0       0       0
+[2024-11-08, 14:11:40 UTC] {subprocess.py:106} INFO - Reducer 8        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:40 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:40 UTC] {subprocess.py:106} INFO - VERTICES: 03/08  [=================>>---------] 66%   ELAPSED TIME: 60.61 s
+[2024-11-08, 14:11:40 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:44 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:44 UTC] {subprocess.py:106} INFO -         VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+[2024-11-08, 14:11:44 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:44 UTC] {subprocess.py:106} INFO - Map 1 .......... container     SUCCEEDED      1          1        0        0       0       1
+[2024-11-08, 14:11:44 UTC] {subprocess.py:106} INFO - Map 6 .......... container     SUCCEEDED      5          5        0        0       0       0
+[2024-11-08, 14:11:44 UTC] {subprocess.py:106} INFO - Reducer 2 ...    container       RUNNING     13          8        4        1       0       2
+[2024-11-08, 14:11:44 UTC] {subprocess.py:106} INFO - Reducer 3        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:44 UTC] {subprocess.py:106} INFO - Reducer 5        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:44 UTC] {subprocess.py:106} INFO - Map 9 .......... container     SUCCEEDED      1          1        0        0       0       0
+[2024-11-08, 14:11:44 UTC] {subprocess.py:106} INFO - Reducer 7 .....  container       RUNNING     13         12        1        0       0       0
+[2024-11-08, 14:11:44 UTC] {subprocess.py:106} INFO - Reducer 8        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:44 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:44 UTC] {subprocess.py:106} INFO - VERTICES: 03/08  [===================>>-------] 75%   ELAPSED TIME: 64.62 s
+[2024-11-08, 14:11:44 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:48 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:48 UTC] {subprocess.py:106} INFO -         VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+[2024-11-08, 14:11:48 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:48 UTC] {subprocess.py:106} INFO - Map 1 .......... container     SUCCEEDED      1          1        0        0       0       1
+[2024-11-08, 14:11:48 UTC] {subprocess.py:106} INFO - Map 6 .......... container     SUCCEEDED      5          5        0        0       0       0
+[2024-11-08, 14:11:48 UTC] {subprocess.py:106} INFO - Reducer 2 .....  container       RUNNING     13         11        2        0       0       2
+[2024-11-08, 14:11:48 UTC] {subprocess.py:106} INFO - Reducer 3        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:48 UTC] {subprocess.py:106} INFO - Reducer 5        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:48 UTC] {subprocess.py:106} INFO - Map 9 .......... container     SUCCEEDED      1          1        0        0       0       0
+[2024-11-08, 14:11:48 UTC] {subprocess.py:106} INFO - Reducer 7 ...... container     SUCCEEDED     13         13        0        0       0       0
+[2024-11-08, 14:11:48 UTC] {subprocess.py:106} INFO - Reducer 8        container       RUNNING      1          0        1        0       0       0
+[2024-11-08, 14:11:48 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:48 UTC] {subprocess.py:106} INFO - VERTICES: 04/08  [======================>>----] 86%   ELAPSED TIME: 68.62 s
+[2024-11-08, 14:11:48 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:52 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:52 UTC] {subprocess.py:106} INFO -         VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+[2024-11-08, 14:11:52 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:52 UTC] {subprocess.py:106} INFO - Map 1 .......... container     SUCCEEDED      1          1        0        0       0       1
+[2024-11-08, 14:11:52 UTC] {subprocess.py:106} INFO - Map 6 .......... container     SUCCEEDED      5          5        0        0       0       0
+[2024-11-08, 14:11:52 UTC] {subprocess.py:106} INFO - Reducer 2 ...... container     SUCCEEDED     13         13        0        0       0       2
+[2024-11-08, 14:11:52 UTC] {subprocess.py:106} INFO - Reducer 3        container       RUNNING      1          0        1        0       0       0
+[2024-11-08, 14:11:52 UTC] {subprocess.py:106} INFO - Reducer 5        container        INITED      1          0        0        1       0       0
+[2024-11-08, 14:11:52 UTC] {subprocess.py:106} INFO - Map 9 .......... container     SUCCEEDED      1          1        0        0       0       0
+[2024-11-08, 14:11:52 UTC] {subprocess.py:106} INFO - Reducer 7 ...... container     SUCCEEDED     13         13        0        0       0       0
+[2024-11-08, 14:11:52 UTC] {subprocess.py:106} INFO - Reducer 8 ...... container     SUCCEEDED      1          1        0        0       0       0
+[2024-11-08, 14:11:52 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:52 UTC] {subprocess.py:106} INFO - VERTICES: 06/08  [========================>>--] 94%   ELAPSED TIME: 73.12 s
+[2024-11-08, 14:11:52 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:55 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:55 UTC] {subprocess.py:106} INFO -         VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+[2024-11-08, 14:11:55 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:55 UTC] {subprocess.py:106} INFO - Map 1 .......... container     SUCCEEDED      1          1        0        0       0       1
+[2024-11-08, 14:11:55 UTC] {subprocess.py:106} INFO - Map 6 .......... container     SUCCEEDED      5          5        0        0       0       0
+[2024-11-08, 14:11:55 UTC] {subprocess.py:106} INFO - Reducer 2 ...... container     SUCCEEDED     13         13        0        0       0       2
+[2024-11-08, 14:11:55 UTC] {subprocess.py:106} INFO - Reducer 3 ...... container     SUCCEEDED      1          1        0        0       0       0
+[2024-11-08, 14:11:55 UTC] {subprocess.py:106} INFO - Reducer 5 ...... container     SUCCEEDED      1          1        0        0       0       0
+[2024-11-08, 14:11:55 UTC] {subprocess.py:106} INFO - Map 9 .......... container     SUCCEEDED      1          1        0        0       0       0
+[2024-11-08, 14:11:55 UTC] {subprocess.py:106} INFO - Reducer 7 ...... container     SUCCEEDED     13         13        0        0       0       0
+[2024-11-08, 14:11:55 UTC] {subprocess.py:106} INFO - Reducer 8 ...... container     SUCCEEDED      1          1        0        0       0       0
+[2024-11-08, 14:11:55 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:55 UTC] {subprocess.py:106} INFO - VERTICES: 08/08  [==========================>>] 100%  ELAPSED TIME: 76.27 s
+[2024-11-08, 14:11:55 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:55 UTC] {subprocess.py:106} INFO - INFO  : Starting task [Stage-2:DEPENDENCY_COLLECTION] in serial mode
+[2024-11-08, 14:11:55 UTC] {subprocess.py:106} INFO - INFO  : Starting task [Stage-0:MOVE] in serial mode
+[2024-11-08, 14:11:55 UTC] {subprocess.py:106} INFO - INFO  : Loading data to table default.top_persons from hdfs://pbd-cluster-m/user/hive/warehouse/top_persons/.hive-staging_hive_2024-11-08_14-10-25_714_5198811816767204517-6/-ext-10000
+[2024-11-08, 14:11:55 UTC] {subprocess.py:106} INFO - INFO  : Starting task [Stage-3:STATS] in serial mode
+[2024-11-08, 14:11:55 UTC] {subprocess.py:106} INFO - INFO  : Completed executing command(queryId=hive_20241108141025_43209a98-78c4-439d-b300-f9dafb0792e8); Time taken: 89.663 seconds
+[2024-11-08, 14:11:55 UTC] {subprocess.py:106} INFO - INFO  : OK
+[2024-11-08, 14:11:55 UTC] {subprocess.py:106} INFO - INFO  : Concurrency mode is disabled, not creating a lock manager
+[2024-11-08, 14:11:55 UTC] {subprocess.py:106} INFO - No rows affected (90.272 seconds)
+[2024-11-08, 14:11:55 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:11:55 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:11:55 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:11:55 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default> -- Save the output in JSON format with  
+proper column aliases
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default> CREATE EXTERNAL TABLE output_json (
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>   primaryName STRING,
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>   role STRING,
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>   movies INT
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .> )
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .> ROW FORMAT SERDE 'org.apache.hive.hcata 
+log.data.JsonSerDe'
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .> STORED AS TEXTFILE
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .> LOCATION '${output_dir6}';
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - INFO  : Compiling command(queryId=hive_20241108141156_0eb89007-4bdb-484e-a9ac-abee1b4f62f6): CREATE EXTERNAL TABLE output_json (
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - primaryName STRING,
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - role STRING,
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - movies INT
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - )
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - ROW FORMAT SERDE 'org.apache.hive.hcatalog.data.JsonSerDe'
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - STORED AS TEXTFILE
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - LOCATION '/project1/output6'
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - INFO  : Concurrency mode is disabled, not creating a lock manager
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - INFO  : Semantic Analysis Completed (retrial = false)
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - INFO  : Returning Hive schema: Schema(fieldSchemas:null, properties:null)
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - INFO  : Completed compiling command(queryId=hive_20241108141156_0eb89007-4bdb-484e-a9ac-abee1b4f62f6); Time taken: 0.038 seconds
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - INFO  : Concurrency mode is disabled, not creating a lock manager
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - INFO  : Executing command(queryId=hive_20241108141156_0eb89007-4bdb-484e-a9ac-abee1b4f62f6): CREATE EXTERNAL TABLE output_json (
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - primaryName STRING,
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - role STRING,
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - movies INT
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - )
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - ROW FORMAT SERDE 'org.apache.hive.hcatalog.data.JsonSerDe'
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - STORED AS TEXTFILE
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - LOCATION '/project1/output6'
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - INFO  : Starting task [Stage-0:DDL] in serial mode
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - INFO  : Completed executing command(queryId=hive_20241108141156_0eb89007-4bdb-484e-a9ac-abee1b4f62f6); Time taken: 0.053 seconds
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - INFO  : OK
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - INFO  : Concurrency mode is disabled, not creating a lock manager
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - No rows affected (0.115 seconds)
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default> INSERT OVERWRITE TABLE output_json
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .> SELECT
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>   primaryName,
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>   role,
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>   movies
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .> FROM
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>
+[2024-11-08, 14:11:56 UTC] {subprocess.py:106} INFO - . . . . . . . . . . . . . . . . . . . .>   top_persons;
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - INFO  : Compiling command(queryId=hive_20241108141156_cc2fe356-cbbd-4519-bdc0-b0fe440c7d80): INSERT OVERWRITE TABLE output_json
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - SELECT
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - primaryName,
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - role,
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - movies
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - FROM
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - top_persons
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - INFO  : Concurrency mode is disabled, not creating a lock manager
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - INFO  : Semantic Analysis Completed (retrial = false)
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - INFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:primaryname, type:string, comment:null), FieldSchema(name:role, type:string, comment:null), FieldSchema(name:movies, type:int, comment:null)], properties:null)
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - INFO  : Completed compiling command(queryId=hive_20241108141156_cc2fe356-cbbd-4519-bdc0-b0fe440c7d80); Time taken: 0.288 seconds
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - INFO  : Concurrency mode is disabled, not creating a lock manager
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - INFO  : Executing command(queryId=hive_20241108141156_cc2fe356-cbbd-4519-bdc0-b0fe440c7d80): INSERT OVERWRITE TABLE output_json
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - SELECT
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - primaryName,
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - role,
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - movies
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - FROM
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - top_persons
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - INFO  : Query ID = hive_20241108141156_cc2fe356-cbbd-4519-bdc0-b0fe440c7d80
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - INFO  : Total jobs = 1
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - INFO  : Launching Job 1 out of 1
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - INFO  : Starting task [Stage-1:MAPRED] in serial mode
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - INFO  : Subscribed to counters: [] for queryId: hive_20241108141156_cc2fe356-cbbd-4519-bdc0-b0fe440c7d80
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - INFO  : Session is already open
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - INFO  : Dag name: INSERT OVERWRITE TABL...ies
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - FROM
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - top_persons (Stage-1)
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - INFO  : Status: Running (Executing on YARN cluster with App id application_1731070111482_0006)
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - 
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO -         VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - Map 1 .......... container     SUCCEEDED      1          1        0        0       0       0
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - Reducer 2 ...... container     SUCCEEDED      1          1        0        0       0       0
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - VERTICES: 02/02  [==========================>>] 100%  ELAPSED TIME: 0.92 s
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - ----------------------------------------------------------------------------------------------
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - INFO  : Starting task [Stage-2:DEPENDENCY_COLLECTION] in serial mode
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - INFO  : Starting task [Stage-0:MOVE] in serial mode
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - INFO  : Loading data to table default.output_json from hdfs://pbd-cluster-m/project1/output6/.hive-staging_hive_2024-11-08_14-11-56_322_3683416260554626940-6/-ext-10000
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - INFO  : Starting task [Stage-3:STATS] in serial mode
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - INFO  : Completed executing command(queryId=hive_20241108141156_cc2fe356-cbbd-4519-bdc0-b0fe440c7d80); Time taken: 1.238 seconds
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - INFO  : OK
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - INFO  : Concurrency mode is disabled, not creating a lock manager
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - No rows affected (1.54 seconds)
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default>
+[2024-11-08, 14:11:57 UTC] {subprocess.py:106} INFO - 0: jdbc:hive2://localhost:10000/default> Closing: 0: jdbc:hive2://localhost:10000/default
+[2024-11-08, 14:11:57 UTC] {subprocess.py:110} INFO - Command exited with return code 0
+[2024-11-08, 14:11:57 UTC] {taskinstance.py:340} ▼ Post task execution logs
+[2024-11-08, 14:11:57 UTC] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=project1-workflow, task_id=hive, run_id=manual__2024-11-08T13:58:36+00:00, execution_date=20241108T135836, start_date=20241108T141019, end_date=20241108T141157
+[2024-11-08, 14:11:57 UTC] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-11-08, 14:11:57 UTC] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-11-08, 14:11:57 UTC] {logging_mixin.py:190} INFO - Dag name:project1-workflow queued_at:2024-11-08 13:59:32.688147+00:00
+[2024-11-08, 14:11:57 UTC] {logging_mixin.py:190} INFO - Task hostname:pbd-cluster-m.europe-west4-b.c.big-data-2024-10-ik.internal operator:BashOperator
+[2024-11-08, 14:11:58 UTC] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-08, 14:11:58 UTC] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-11-08, 14:11:58 UTC] {local_task_job_runner.py:245} ▲▲▲ Log group end

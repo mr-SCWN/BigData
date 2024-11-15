@@ -1,0 +1,23 @@
+pbd-cluster-m.europe-west4-b.c.big-data-2024-10-ik.internal
+*** Found local files:
+***   * /home/ivan_kaliadzich_bigdata/airflow/logs/dag_id=project1-workflow/run_id=manual__2024-11-08T13:58:36+00:00/task_id=get_output/attempt=1.log
+[2024-11-08, 14:12:02 UTC] {local_task_job_runner.py:123} ▶ Pre task execution logs
+[2024-11-08, 14:12:02 UTC] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2024-11-08, 14:12:02 UTC] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'hadoop fs -getmerge /project1/output6 output6.json\n    cat output6.json']
+[2024-11-08, 14:12:02 UTC] {subprocess.py:99} INFO - Output:
+[2024-11-08, 14:12:06 UTC] {subprocess.py:106} INFO - {"primaryname":"Anil V. Kumar","role":"director","movies":7980}
+[2024-11-08, 14:12:06 UTC] {subprocess.py:106} INFO - {"primaryname":"Henrique Martins","role":"director","movies":6455}
+[2024-11-08, 14:12:06 UTC] {subprocess.py:106} INFO - {"primaryname":"Kevin McCarthy","role":"director","movies":6131}
+[2024-11-08, 14:12:06 UTC] {subprocess.py:106} INFO - {"primaryname":"Johnny Gilbert","role":"actor","movies":8512}
+[2024-11-08, 14:12:06 UTC] {subprocess.py:106} INFO - {"primaryname":"Alex Trebek","role":"actor","movies":7999}
+[2024-11-08, 14:12:06 UTC] {subprocess.py:106} INFO - {"primaryname":"Pat Sajak","role":"actor","movies":7064}
+[2024-11-08, 14:12:06 UTC] {subprocess.py:110} INFO - Command exited with return code 0
+[2024-11-08, 14:12:06 UTC] {taskinstance.py:340} ▼ Post task execution logs
+[2024-11-08, 14:12:06 UTC] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=project1-workflow, task_id=get_output, run_id=manual__2024-11-08T13:58:36+00:00, execution_date=20241108T135836, start_date=20241108T141202, end_date=20241108T141206
+[2024-11-08, 14:12:06 UTC] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-11-08, 14:12:06 UTC] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-11-08, 14:12:06 UTC] {logging_mixin.py:190} INFO - Dag name:project1-workflow queued_at:2024-11-08 13:59:32.688147+00:00
+[2024-11-08, 14:12:06 UTC] {logging_mixin.py:190} INFO - Task hostname:pbd-cluster-m.europe-west4-b.c.big-data-2024-10-ik.internal operator:BashOperator
+[2024-11-08, 14:12:06 UTC] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-08, 14:12:06 UTC] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-08, 14:12:06 UTC] {local_task_job_runner.py:245} ▲▲▲ Log group end

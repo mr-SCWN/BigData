@@ -1,0 +1,196 @@
+pbd-cluster-m.europe-west4-b.c.big-data-2024-10-ik.internal
+*** Found local files:
+***   * /home/ivan_kaliadzich_bigdata/airflow/logs/dag_id=project1-workflow/run_id=manual__2024-11-08T13:58:36+00:00/task_id=mapreduce_classic/attempt=1.log
+[2024-11-08, 14:00:04 UTC] {local_task_job_runner.py:123} ▶ Pre task execution logs
+[2024-11-08, 14:00:04 UTC] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2024-11-08, 14:00:04 UTC] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'hadoop jar /home/ivan_kaliadzich_bigdata/airflow/dags/project_files/IMDBRoleCount.jar gs://pbd-24-ik-153936/projekt1/input/datasource1 /project1/output_mr3']
+[2024-11-08, 14:00:04 UTC] {subprocess.py:99} INFO - Output:
+[2024-11-08, 14:00:08 UTC] {subprocess.py:106} INFO - 2024-11-08 14:00:08,840 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at pbd-cluster-m.europe-west4-b.c.big-data-2024-10-ik.internal./10.164.0.22:8032
+[2024-11-08, 14:00:08 UTC] {subprocess.py:106} INFO - 2024-11-08 14:00:08,990 INFO client.AHSProxy: Connecting to Application History server at pbd-cluster-m.europe-west4-b.c.big-data-2024-10-ik.internal./10.164.0.22:10200
+[2024-11-08, 14:00:09 UTC] {subprocess.py:106} INFO - 2024-11-08 14:00:09,201 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/ivan_kaliadzich_bigdata/.staging/job_1731070111482_0005
+[2024-11-08, 14:00:09 UTC] {subprocess.py:106} INFO - 2024-11-08 14:00:09,899 INFO input.FileInputFormat: Total input files to process : 100
+[2024-11-08, 14:00:09 UTC] {subprocess.py:106} INFO - 2024-11-08 14:00:09,998 INFO mapreduce.JobSubmitter: number of splits:100
+[2024-11-08, 14:00:10 UTC] {subprocess.py:106} INFO - 2024-11-08 14:00:10,278 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1731070111482_0005
+[2024-11-08, 14:00:10 UTC] {subprocess.py:106} INFO - 2024-11-08 14:00:10,278 INFO mapreduce.JobSubmitter: Executing with tokens: []
+[2024-11-08, 14:00:10 UTC] {subprocess.py:106} INFO - 2024-11-08 14:00:10,474 INFO conf.Configuration: resource-types.xml not found
+[2024-11-08, 14:00:10 UTC] {subprocess.py:106} INFO - 2024-11-08 14:00:10,474 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+[2024-11-08, 14:00:10 UTC] {subprocess.py:106} INFO - 2024-11-08 14:00:10,538 INFO impl.YarnClientImpl: Submitted application application_1731070111482_0005
+[2024-11-08, 14:00:10 UTC] {subprocess.py:106} INFO - 2024-11-08 14:00:10,590 INFO mapreduce.Job: The url to track the job: http://pbd-cluster-m.europe-west4-b.c.big-data-2024-10-ik.internal.:8088/proxy/application_1731070111482_0005/
+[2024-11-08, 14:00:10 UTC] {subprocess.py:106} INFO - 2024-11-08 14:00:10,591 INFO mapreduce.Job: Running job: job_1731070111482_0005
+[2024-11-08, 14:00:24 UTC] {subprocess.py:106} INFO - 2024-11-08 14:00:24,796 INFO mapreduce.Job: Job job_1731070111482_0005 running in uber mode : false
+[2024-11-08, 14:00:24 UTC] {subprocess.py:106} INFO - 2024-11-08 14:00:24,797 INFO mapreduce.Job:  map 0% reduce 0%
+[2024-11-08, 14:00:37 UTC] {subprocess.py:106} INFO - 2024-11-08 14:00:37,934 INFO mapreduce.Job:  map 1% reduce 0%
+[2024-11-08, 14:00:48 UTC] {subprocess.py:106} INFO - 2024-11-08 14:00:48,010 INFO mapreduce.Job:  map 3% reduce 0%
+[2024-11-08, 14:00:50 UTC] {subprocess.py:106} INFO - 2024-11-08 14:00:50,023 INFO mapreduce.Job:  map 4% reduce 0%
+[2024-11-08, 14:01:02 UTC] {subprocess.py:106} INFO - 2024-11-08 14:01:02,098 INFO mapreduce.Job:  map 5% reduce 0%
+[2024-11-08, 14:01:09 UTC] {subprocess.py:106} INFO - 2024-11-08 14:01:09,140 INFO mapreduce.Job:  map 7% reduce 0%
+[2024-11-08, 14:01:14 UTC] {subprocess.py:106} INFO - 2024-11-08 14:01:14,167 INFO mapreduce.Job:  map 8% reduce 0%
+[2024-11-08, 14:01:26 UTC] {subprocess.py:106} INFO - 2024-11-08 14:01:26,249 INFO mapreduce.Job:  map 9% reduce 0%
+[2024-11-08, 14:01:30 UTC] {subprocess.py:106} INFO - 2024-11-08 14:01:30,282 INFO mapreduce.Job:  map 11% reduce 0%
+[2024-11-08, 14:01:38 UTC] {subprocess.py:106} INFO - 2024-11-08 14:01:38,324 INFO mapreduce.Job:  map 12% reduce 0%
+[2024-11-08, 14:01:49 UTC] {subprocess.py:106} INFO - 2024-11-08 14:01:49,391 INFO mapreduce.Job:  map 13% reduce 0%
+[2024-11-08, 14:01:50 UTC] {subprocess.py:106} INFO - 2024-11-08 14:01:50,397 INFO mapreduce.Job:  map 14% reduce 0%
+[2024-11-08, 14:01:51 UTC] {subprocess.py:106} INFO - 2024-11-08 14:01:51,404 INFO mapreduce.Job:  map 15% reduce 0%
+[2024-11-08, 14:02:02 UTC] {subprocess.py:106} INFO - 2024-11-08 14:02:02,462 INFO mapreduce.Job:  map 16% reduce 0%
+[2024-11-08, 14:02:10 UTC] {subprocess.py:106} INFO - 2024-11-08 14:02:10,503 INFO mapreduce.Job:  map 17% reduce 0%
+[2024-11-08, 14:02:11 UTC] {subprocess.py:106} INFO - 2024-11-08 14:02:11,508 INFO mapreduce.Job:  map 18% reduce 0%
+[2024-11-08, 14:02:14 UTC] {subprocess.py:106} INFO - 2024-11-08 14:02:14,530 INFO mapreduce.Job:  map 19% reduce 0%
+[2024-11-08, 14:02:26 UTC] {subprocess.py:106} INFO - 2024-11-08 14:02:26,594 INFO mapreduce.Job:  map 20% reduce 0%
+[2024-11-08, 14:02:29 UTC] {subprocess.py:106} INFO - 2024-11-08 14:02:29,613 INFO mapreduce.Job:  map 21% reduce 0%
+[2024-11-08, 14:02:31 UTC] {subprocess.py:106} INFO - 2024-11-08 14:02:31,624 INFO mapreduce.Job:  map 22% reduce 0%
+[2024-11-08, 14:02:38 UTC] {subprocess.py:106} INFO - 2024-11-08 14:02:38,656 INFO mapreduce.Job:  map 23% reduce 0%
+[2024-11-08, 14:02:49 UTC] {subprocess.py:106} INFO - 2024-11-08 14:02:49,706 INFO mapreduce.Job:  map 24% reduce 0%
+[2024-11-08, 14:02:50 UTC] {subprocess.py:106} INFO - 2024-11-08 14:02:50,710 INFO mapreduce.Job:  map 25% reduce 0%
+[2024-11-08, 14:02:51 UTC] {subprocess.py:106} INFO - 2024-11-08 14:02:51,715 INFO mapreduce.Job:  map 26% reduce 0%
+[2024-11-08, 14:03:03 UTC] {subprocess.py:106} INFO - 2024-11-08 14:03:03,769 INFO mapreduce.Job:  map 27% reduce 0%
+[2024-11-08, 14:03:10 UTC] {subprocess.py:106} INFO - 2024-11-08 14:03:10,798 INFO mapreduce.Job:  map 28% reduce 0%
+[2024-11-08, 14:03:11 UTC] {subprocess.py:106} INFO - 2024-11-08 14:03:11,802 INFO mapreduce.Job:  map 29% reduce 0%
+[2024-11-08, 14:03:15 UTC] {subprocess.py:106} INFO - 2024-11-08 14:03:15,822 INFO mapreduce.Job:  map 30% reduce 0%
+[2024-11-08, 14:03:27 UTC] {subprocess.py:106} INFO - 2024-11-08 14:03:27,877 INFO mapreduce.Job:  map 31% reduce 0%
+[2024-11-08, 14:03:30 UTC] {subprocess.py:106} INFO - 2024-11-08 14:03:30,894 INFO mapreduce.Job:  map 32% reduce 0%
+[2024-11-08, 14:03:31 UTC] {subprocess.py:106} INFO - 2024-11-08 14:03:31,898 INFO mapreduce.Job:  map 33% reduce 0%
+[2024-11-08, 14:03:38 UTC] {subprocess.py:106} INFO - 2024-11-08 14:03:38,926 INFO mapreduce.Job:  map 34% reduce 0%
+[2024-11-08, 14:03:49 UTC] {subprocess.py:106} INFO - 2024-11-08 14:03:49,972 INFO mapreduce.Job:  map 35% reduce 0%
+[2024-11-08, 14:03:50 UTC] {subprocess.py:106} INFO - 2024-11-08 14:03:50,975 INFO mapreduce.Job:  map 36% reduce 0%
+[2024-11-08, 14:03:51 UTC] {subprocess.py:106} INFO - 2024-11-08 14:03:51,979 INFO mapreduce.Job:  map 37% reduce 0%
+[2024-11-08, 14:04:02 UTC] {subprocess.py:106} INFO - 2024-11-08 14:04:02,019 INFO mapreduce.Job:  map 38% reduce 0%
+[2024-11-08, 14:04:10 UTC] {subprocess.py:106} INFO - 2024-11-08 14:04:10,050 INFO mapreduce.Job:  map 39% reduce 0%
+[2024-11-08, 14:04:12 UTC] {subprocess.py:106} INFO - 2024-11-08 14:04:12,057 INFO mapreduce.Job:  map 40% reduce 0%
+[2024-11-08, 14:04:14 UTC] {subprocess.py:106} INFO - 2024-11-08 14:04:14,064 INFO mapreduce.Job:  map 41% reduce 0%
+[2024-11-08, 14:04:26 UTC] {subprocess.py:106} INFO - 2024-11-08 14:04:26,108 INFO mapreduce.Job:  map 42% reduce 0%
+[2024-11-08, 14:04:30 UTC] {subprocess.py:106} INFO - 2024-11-08 14:04:30,135 INFO mapreduce.Job:  map 43% reduce 0%
+[2024-11-08, 14:04:33 UTC] {subprocess.py:106} INFO - 2024-11-08 14:04:33,147 INFO mapreduce.Job:  map 44% reduce 0%
+[2024-11-08, 14:04:38 UTC] {subprocess.py:106} INFO - 2024-11-08 14:04:38,165 INFO mapreduce.Job:  map 45% reduce 0%
+[2024-11-08, 14:04:49 UTC] {subprocess.py:106} INFO - 2024-11-08 14:04:49,211 INFO mapreduce.Job:  map 46% reduce 0%
+[2024-11-08, 14:04:51 UTC] {subprocess.py:106} INFO - 2024-11-08 14:04:51,231 INFO mapreduce.Job:  map 47% reduce 0%
+[2024-11-08, 14:04:53 UTC] {subprocess.py:106} INFO - 2024-11-08 14:04:53,241 INFO mapreduce.Job:  map 48% reduce 0%
+[2024-11-08, 14:05:00 UTC] {subprocess.py:106} INFO - 2024-11-08 14:05:00,265 INFO mapreduce.Job:  map 49% reduce 0%
+[2024-11-08, 14:05:11 UTC] {subprocess.py:106} INFO - 2024-11-08 14:05:11,308 INFO mapreduce.Job:  map 50% reduce 0%
+[2024-11-08, 14:05:12 UTC] {subprocess.py:106} INFO - 2024-11-08 14:05:12,312 INFO mapreduce.Job:  map 52% reduce 0%
+[2024-11-08, 14:05:25 UTC] {subprocess.py:106} INFO - 2024-11-08 14:05:25,359 INFO mapreduce.Job:  map 53% reduce 0%
+[2024-11-08, 14:05:33 UTC] {subprocess.py:106} INFO - 2024-11-08 14:05:33,392 INFO mapreduce.Job:  map 54% reduce 0%
+[2024-11-08, 14:05:34 UTC] {subprocess.py:106} INFO - 2024-11-08 14:05:34,396 INFO mapreduce.Job:  map 55% reduce 0%
+[2024-11-08, 14:05:36 UTC] {subprocess.py:106} INFO - 2024-11-08 14:05:36,403 INFO mapreduce.Job:  map 56% reduce 0%
+[2024-11-08, 14:05:48 UTC] {subprocess.py:106} INFO - 2024-11-08 14:05:48,454 INFO mapreduce.Job:  map 57% reduce 0%
+[2024-11-08, 14:05:54 UTC] {subprocess.py:106} INFO - 2024-11-08 14:05:54,478 INFO mapreduce.Job:  map 58% reduce 0%
+[2024-11-08, 14:05:55 UTC] {subprocess.py:106} INFO - 2024-11-08 14:05:55,481 INFO mapreduce.Job:  map 59% reduce 0%
+[2024-11-08, 14:06:01 UTC] {subprocess.py:106} INFO - 2024-11-08 14:06:01,501 INFO mapreduce.Job:  map 60% reduce 0%
+[2024-11-08, 14:06:12 UTC] {subprocess.py:106} INFO - 2024-11-08 14:06:12,555 INFO mapreduce.Job:  map 61% reduce 0%
+[2024-11-08, 14:06:14 UTC] {subprocess.py:106} INFO - 2024-11-08 14:06:14,562 INFO mapreduce.Job:  map 62% reduce 0%
+[2024-11-08, 14:06:15 UTC] {subprocess.py:106} INFO - 2024-11-08 14:06:15,568 INFO mapreduce.Job:  map 63% reduce 0%
+[2024-11-08, 14:06:25 UTC] {subprocess.py:106} INFO - 2024-11-08 14:06:25,599 INFO mapreduce.Job:  map 64% reduce 0%
+[2024-11-08, 14:06:34 UTC] {subprocess.py:106} INFO - 2024-11-08 14:06:34,628 INFO mapreduce.Job:  map 65% reduce 0%
+[2024-11-08, 14:06:36 UTC] {subprocess.py:106} INFO - 2024-11-08 14:06:36,635 INFO mapreduce.Job:  map 67% reduce 0%
+[2024-11-08, 14:06:48 UTC] {subprocess.py:106} INFO - 2024-11-08 14:06:48,674 INFO mapreduce.Job:  map 68% reduce 0%
+[2024-11-08, 14:06:55 UTC] {subprocess.py:106} INFO - 2024-11-08 14:06:55,705 INFO mapreduce.Job:  map 69% reduce 0%
+[2024-11-08, 14:06:56 UTC] {subprocess.py:106} INFO - 2024-11-08 14:06:56,709 INFO mapreduce.Job:  map 70% reduce 0%
+[2024-11-08, 14:07:00 UTC] {subprocess.py:106} INFO - 2024-11-08 14:07:00,721 INFO mapreduce.Job:  map 71% reduce 0%
+[2024-11-08, 14:07:12 UTC] {subprocess.py:106} INFO - 2024-11-08 14:07:12,765 INFO mapreduce.Job:  map 72% reduce 0%
+[2024-11-08, 14:07:15 UTC] {subprocess.py:106} INFO - 2024-11-08 14:07:15,777 INFO mapreduce.Job:  map 73% reduce 0%
+[2024-11-08, 14:07:17 UTC] {subprocess.py:106} INFO - 2024-11-08 14:07:17,784 INFO mapreduce.Job:  map 74% reduce 0%
+[2024-11-08, 14:07:24 UTC] {subprocess.py:106} INFO - 2024-11-08 14:07:24,805 INFO mapreduce.Job:  map 75% reduce 0%
+[2024-11-08, 14:07:36 UTC] {subprocess.py:106} INFO - 2024-11-08 14:07:36,843 INFO mapreduce.Job:  map 77% reduce 0%
+[2024-11-08, 14:07:37 UTC] {subprocess.py:106} INFO - 2024-11-08 14:07:37,848 INFO mapreduce.Job:  map 78% reduce 0%
+[2024-11-08, 14:07:48 UTC] {subprocess.py:106} INFO - 2024-11-08 14:07:48,880 INFO mapreduce.Job:  map 79% reduce 0%
+[2024-11-08, 14:07:56 UTC] {subprocess.py:106} INFO - 2024-11-08 14:07:56,914 INFO mapreduce.Job:  map 80% reduce 0%
+[2024-11-08, 14:07:58 UTC] {subprocess.py:106} INFO - 2024-11-08 14:07:58,927 INFO mapreduce.Job:  map 81% reduce 0%
+[2024-11-08, 14:08:00 UTC] {subprocess.py:106} INFO - 2024-11-08 14:08:00,934 INFO mapreduce.Job:  map 82% reduce 0%
+[2024-11-08, 14:08:12 UTC] {subprocess.py:106} INFO - 2024-11-08 14:08:12,977 INFO mapreduce.Job:  map 83% reduce 0%
+[2024-11-08, 14:08:19 UTC] {subprocess.py:106} INFO - 2024-11-08 14:08:18,999 INFO mapreduce.Job:  map 85% reduce 0%
+[2024-11-08, 14:08:24 UTC] {subprocess.py:106} INFO - 2024-11-08 14:08:24,015 INFO mapreduce.Job:  map 86% reduce 0%
+[2024-11-08, 14:08:35 UTC] {subprocess.py:106} INFO - 2024-11-08 14:08:35,053 INFO mapreduce.Job:  map 87% reduce 0%
+[2024-11-08, 14:08:39 UTC] {subprocess.py:106} INFO - 2024-11-08 14:08:39,066 INFO mapreduce.Job:  map 88% reduce 0%
+[2024-11-08, 14:08:41 UTC] {subprocess.py:106} INFO - 2024-11-08 14:08:41,072 INFO mapreduce.Job:  map 89% reduce 0%
+[2024-11-08, 14:08:48 UTC] {subprocess.py:106} INFO - 2024-11-08 14:08:48,095 INFO mapreduce.Job:  map 90% reduce 0%
+[2024-11-08, 14:08:59 UTC] {subprocess.py:106} INFO - 2024-11-08 14:08:59,138 INFO mapreduce.Job:  map 92% reduce 0%
+[2024-11-08, 14:09:01 UTC] {subprocess.py:106} INFO - 2024-11-08 14:09:01,145 INFO mapreduce.Job:  map 93% reduce 0%
+[2024-11-08, 14:09:11 UTC] {subprocess.py:106} INFO - 2024-11-08 14:09:11,177 INFO mapreduce.Job:  map 94% reduce 0%
+[2024-11-08, 14:09:19 UTC] {subprocess.py:106} INFO - 2024-11-08 14:09:19,203 INFO mapreduce.Job:  map 95% reduce 0%
+[2024-11-08, 14:09:20 UTC] {subprocess.py:106} INFO - 2024-11-08 14:09:20,220 INFO mapreduce.Job:  map 96% reduce 0%
+[2024-11-08, 14:09:24 UTC] {subprocess.py:106} INFO - 2024-11-08 14:09:24,238 INFO mapreduce.Job:  map 97% reduce 0%
+[2024-11-08, 14:09:36 UTC] {subprocess.py:106} INFO - 2024-11-08 14:09:36,292 INFO mapreduce.Job:  map 98% reduce 0%
+[2024-11-08, 14:09:37 UTC] {subprocess.py:106} INFO - 2024-11-08 14:09:37,295 INFO mapreduce.Job:  map 99% reduce 0%
+[2024-11-08, 14:09:45 UTC] {subprocess.py:106} INFO - 2024-11-08 14:09:45,324 INFO mapreduce.Job:  map 99% reduce 33%
+[2024-11-08, 14:09:47 UTC] {subprocess.py:106} INFO - 2024-11-08 14:09:47,330 INFO mapreduce.Job:  map 100% reduce 33%
+[2024-11-08, 14:09:51 UTC] {subprocess.py:106} INFO - 2024-11-08 14:09:51,344 INFO mapreduce.Job:  map 100% reduce 44%
+[2024-11-08, 14:09:57 UTC] {subprocess.py:106} INFO - 2024-11-08 14:09:57,364 INFO mapreduce.Job:  map 100% reduce 63%
+[2024-11-08, 14:10:03 UTC] {subprocess.py:106} INFO - 2024-11-08 14:10:03,384 INFO mapreduce.Job:  map 100% reduce 82%
+[2024-11-08, 14:10:08 UTC] {subprocess.py:106} INFO - 2024-11-08 14:10:08,402 INFO mapreduce.Job:  map 100% reduce 100%
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 2024-11-08 14:10:10,414 INFO mapreduce.Job: Job job_1731070111482_0005 completed successfully
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 2024-11-08 14:10:10,506 INFO mapreduce.Job: Counters: 60
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 	File System Counters
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		FILE: Number of bytes read=291024132
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		FILE: Number of bytes written=611057204
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		FILE: Number of read operations=0
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		FILE: Number of large read operations=0
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		FILE: Number of write operations=0
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		GS: Number of bytes read=1605001783
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		GS: Number of bytes written=0
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		GS: Number of read operations=391897
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		GS: Number of large read operations=0
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		GS: Number of write operations=0
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		HDFS: Number of bytes read=12400
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		HDFS: Number of bytes written=41207708
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		HDFS: Number of read operations=205
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		HDFS: Number of large read operations=0
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		HDFS: Number of write operations=3
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		HDFS: Number of bytes read erasure-coded=0
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 	Job Counters
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Killed map tasks=1
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Launched map tasks=100
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Launched reduce tasks=1
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Rack-local map tasks=100
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Total time spent by all maps in occupied slots (ms)=4730646528
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Total time spent by all reduces in occupied slots (ms)=143963136
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Total time spent by all map tasks (ms)=1539924
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Total time spent by all reduce tasks (ms)=46863
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Total vcore-milliseconds taken by all map tasks=1539924
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Total vcore-milliseconds taken by all reduce tasks=46863
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Total megabyte-milliseconds taken by all map tasks=4730646528
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Total megabyte-milliseconds taken by all reduce tasks=143963136
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 	Map-Reduce Framework
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Map input records=36105959
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Map output records=24901661
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Map output bytes=448830919
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Map output materialized bytes=291024726
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Input split bytes=12400
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Combine input records=24901661
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Combine output records=14527004
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Reduce input groups=2899226
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Reduce shuffle bytes=291024726
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Reduce input records=14527004
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Reduce output records=2899226
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Spilled Records=29054008
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Shuffled Maps =100
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Failed Shuffles=0
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Merged Map outputs=100
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		GC time elapsed (ms)=19469
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		CPU time spent (ms)=834530
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Physical memory (bytes) snapshot=69859516416
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Virtual memory (bytes) snapshot=460108865536
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Total committed heap usage (bytes)=55579770880
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Peak Map Physical memory (bytes)=772816896
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Peak Map Virtual memory (bytes)=4567384064
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Peak Reduce Physical memory (bytes)=580743168
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Peak Reduce Virtual memory (bytes)=4552089600
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 	Shuffle Errors
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		BAD_ID=0
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		CONNECTION=0
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		IO_ERROR=0
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		WRONG_LENGTH=0
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		WRONG_MAP=0
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		WRONG_REDUCE=0
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 	File Input Format Counters
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Bytes Read=1605001783
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 	File Output Format Counters
+[2024-11-08, 14:10:10 UTC] {subprocess.py:106} INFO - 		Bytes Written=41207708
+[2024-11-08, 14:10:10 UTC] {subprocess.py:110} INFO - Command exited with return code 0
+[2024-11-08, 14:10:10 UTC] {taskinstance.py:340} ▼ Post task execution logs
+[2024-11-08, 14:10:10 UTC] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=project1-workflow, task_id=mapreduce_classic, run_id=manual__2024-11-08T13:58:36+00:00, execution_date=20241108T135836, start_date=20241108T140004, end_date=20241108T141010
+[2024-11-08, 14:10:10 UTC] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-11-08, 14:10:10 UTC] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-11-08, 14:10:10 UTC] {logging_mixin.py:190} INFO - Dag name:project1-workflow queued_at:2024-11-08 13:59:32.688147+00:00
+[2024-11-08, 14:10:10 UTC] {logging_mixin.py:190} INFO - Task hostname:pbd-cluster-m.europe-west4-b.c.big-data-2024-10-ik.internal operator:BashOperator
+[2024-11-08, 14:10:10 UTC] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-08, 14:10:10 UTC] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-11-08, 14:10:10 UTC] {local_task_job_runner.py:245} ▲▲▲ Log group end
